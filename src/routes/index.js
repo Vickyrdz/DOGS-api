@@ -9,24 +9,24 @@ const postDogs = require("../controllers/postDogs");
 
 const router = Router();
 
-router.get("/dogs", (req, res) => {
+router.get("/api/dogs", (req, res) => {
     if (req.query.name) getDogsByName(req, res); 
     else getDogs(req, res);
 });
 
-router.get("/dogs/:id", (req, res) => {
+router.get("/api/dogs/:id", (req, res) => {
     getDogsById(req, res);
 });
 
-router.get("/dogs", (req, res) => {
+router.get("/api/dogs", (req, res) => {
     getDogsByName(req, res);
 });
 
-router.get("/temperaments", (req, res) => {
+router.get("/api/temperaments", (req, res) => {
     getAllTemps(req, res);
 });
 
-router.post("/dogs", (req, res) => {
+router.post("/api/dogs", (req, res) => {
     postDogs(req, res);
 });
 
